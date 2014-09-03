@@ -4,8 +4,8 @@ Tags: Advanced Custom Fields, acf, acf4, custom fields, admin, menu, nav menu, n
 Author: Faison Zutavern
 Author URI: http://faisonz.com
 Requires at least: 3.4
-Tested up to: 3.9
-Stable tag: 1.1.2
+Tested up to: 3.9.2
+Stable tag: 1.1.2.5
 License: GPL2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +96,9 @@ First, check that you added the necessary ACF code to your templates. If you don
 4. Viewing the (not styled) menu displayed by calling 'the_field()' in the sidebar
 
 == Changelog ==
+
+= 1.1.2.5 =
+* Adding support for ACF Pro v5
 
 = 1.1.2 =
 * Fixed a silly mistake related to allowing Null for a Nav Menu Field. Basically, it was storing the string "null" when you don't select a menu, that's taken care of now.
