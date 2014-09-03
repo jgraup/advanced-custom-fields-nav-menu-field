@@ -1,4 +1,4 @@
-=== Advanced Custom Fields: Nav Menu Field ===
+# Advanced Custom Fields: Nav Menu Field #
 ==============================================
 
 Add-On plugin for Advanced Custom Fields (ACF 4 & 5) that adds a 'Nav Menu' Field type. This version adds support for ACF V5 to the exisiting [Nav Menu Field plugin](http://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/) by [Faison Zutavern](http://faisonz.com/wordpress-plugins/advanced-custom-fields-nav-menu-field/).
