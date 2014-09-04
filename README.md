@@ -7,9 +7,12 @@ This is an [Add-On plugin](http://wordpress.org/extend/plugins/advanced-custom-f
 
 Using ACF, you can set the Nav Menu Field to return the selected menu’s:
 
-* ID for lightweight coding
-* Object for more involved programming
-* HTML (generated from wp_nav_menu) for quickly displaying a menu
+| Return Value   | Usage  |
+| ------ | ------------ |
+| ID     | for lightweight coding |
+| Object | for more involved programming  |
+| HTML   | (generated from [wp_nav_menu](http://codex.wordpress.org/Function_Reference/wp_nav_menu)) for quickly displaying a menu  |
+
 
 ## ACF 4 & Pro 5
 
