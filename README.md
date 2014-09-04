@@ -7,7 +7,7 @@ This is an [Add-On plugin](http://wordpress.org/extend/plugins/advanced-custom-f
 
 Using ACF, you can set the Nav Menu Field to return the selected menu’s:
 
-| Return Value   | Usage  |
+| Return Value   | When to use  |
 | ------ | ------------ |
 | ID     | for lightweight coding |
 | Object | for more involved programming  |
