@@ -4,12 +4,14 @@ This is an [Add-On plugin](http://wordpress.org/extend/plugins/advanced-custom-f
 
 ![](http://faisonz.com/wp-content/uploads/2014/01/acf-nav-menu-field-banner-770x250.png)
 
+
 Using ACF, you can set the Nav Menu Field to return the selected menu’s:
 
 * ID for lightweight coding
 * Object for more involved programming
 * HTML (generated from wp_nav_menu) for quickly displaying a menu
 
+## ACF 4 & Pro 5
 
 This version adds support for [ACF Pro 5](http://www.advancedcustomfields.com/pro) to the exisiting [Nav Menu Field plugin](http://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/) by [Faison Zutavern](http://faisonz.com/wordpress-plugins/advanced-custom-fields-nav-menu-field/).
 
