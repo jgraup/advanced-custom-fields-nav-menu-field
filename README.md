@@ -32,7 +32,7 @@ $post_id = 259;
 $acf_field_id = 'sidebar_menu'; 
 
 // Get the menu id
-$field = get_field($acf_field_id, $post_id);  // Object | HTML | ID
+$field = get_field($acf_field_id, $post_id);  // ID
 
 $titles = array();
 
