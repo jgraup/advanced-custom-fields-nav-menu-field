@@ -13,7 +13,7 @@ Using ACF, you can set the Nav Menu Field to return the selected menu’s:
 
 ## ACF 4 & Pro 5
 
-This version adds support for [ACF Pro 5](http://www.advancedcustomfields.com/pro) to the exisiting [Nav Menu Field plugin](http://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/) by [Faison Zutavern](http://faisonz.com/wordpress-plugins/advanced-custom-fields-nav-menu-field/).
+This version adds support for [ACF Pro 5](http://www.advancedcustomfields.com/pro) to the exisiting [Nav Menu Field plugin](http://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/) by [Faison Zutavern](http://faisonz.com/wordpress-plugins/advanced-custom-fields-nav-menu-field/)  [@Faison](https://github.com/Faison) [@FaisonZ](https://twitter.com/FaisonZ/).
 
 ## Example
 
