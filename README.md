@@ -86,19 +86,20 @@ $field_type = NavFieldTypes::UNKNOWN;
 if(is_object($field)) 
 	$field_type = NavFieldTypes::OBJECT; 
 else if (is_scalar($field)){	
-	if(!is_numeric($field))  
-		$field_type = NavFieldTypes::HTML;
-	 else 
-		$field_type = NavFieldTypes::ID;
-}
+	$field_type = !is_numeric($field) ? 
+		NavFieldTypes::HTML : NavFieldTypes::ID;	 
+} 
 
 // OK, based on what we know we should...
 switch ($field_type)
 {	
   case NavFieldTypes::OBJECT:
 	
-	echo "OBJ: ";
-	print_r($field);
+	// $field -> {ID,name,slug,count}
+	
+	echo "OBJECT: {$field->name} | "; 
+	$items = wp_get_nav_menu_items($field->ID);
+	echo render_nav_menu_items($items);
     break;
 	
   case NavFieldTypes::HTML:
@@ -108,19 +109,25 @@ switch ($field_type)
 	
   case NavFieldTypes::ID:
 	
-	echo "ID: " . $field;
+	echo "ID: {$field} | "; 
 	$items = wp_get_nav_menu_items($field);
+	echo render_nav_menu_items($items);
+    break;
+	
+  default:
+	// Nothing to see here
+}
+
+function render_nav_menu_items($items){
+	ob_start();
 	if($items){
 		$titles = array();
 		foreach($items as $key => $value){
 			$titles[] = $value->title;
 		}
-		echo ":Menu Items: " . implode (" / ", $titles);
+		echo implode (" / ", $titles);
 	}
-    break;
-	
-  default:
-	// Nothing to see here
+	return ob_get_clean();
 }
 ````
 
