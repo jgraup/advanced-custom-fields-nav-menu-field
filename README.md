@@ -57,6 +57,73 @@ print_r($titles);
 error_log(json_encode($items));
 ````
 
+## Example
+
+This example shows how you can dynamically check the Return Value before acting on the data.
+
+````php
+class NavFieldEnum
+{
+	const UNKNOWN = -1;
+	const OBJECT = 0;
+	const HTML = 1;
+	const ID = 2;
+}
+
+// Your post id
+$post_id = 2; 
+
+// Your ACF field id
+$acf_field_id = 'sidebar_menu'; 
+
+// Get the menu id
+$field = get_field($acf_field_id, $post_id);  // Object | HTML | ID
+
+// We don't know the type yet
+$field_type = NavFieldEnum::UNKNOWN;
+
+// Let's find out...
+if(is_object($field)) 
+	$field_type = NavFieldEnum::OBJECT; 
+else if (is_scalar($field)){	
+	if(!is_numeric($field))  
+		$field_type = NavFieldEnum::HTML;
+	 else 
+		$field_type = NavFieldEnum::ID;
+}
+
+// OK, based on what we know we should...
+switch ($field_type)
+{	
+  case NavFieldEnum::OBJECT:
+	
+	echo "OBJ: ";
+	print_r($field);
+    break;
+	
+  case NavFieldEnum::HTML:
+	
+	echo "HTML: " . $field;
+    break;
+	
+  case NavFieldEnum::ID:
+	
+	echo "ID: " . $field;
+	$items = wp_get_nav_menu_items($field);
+	if($items){
+		$titles = array();
+		foreach($items as $key => $value){
+			$titles[] = $value->title;
+		}
+		echo ":Menu Items: " . implode (" / ", $titles);
+	}
+    break;
+	
+  default:
+	// Nothing to see here
+}
+````
+
 ## Links
 
 * [Original ACF 4 Plugin](http://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/)
