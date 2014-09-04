@@ -62,7 +62,7 @@ error_log(json_encode($items));
 This example shows how you can dynamically check the Return Value before acting on the data.
 
 ````php
-class NavFieldEnum
+class NavFieldTypes
 {
 	const UNKNOWN = -1;
 	const OBJECT = 0;
@@ -80,33 +80,33 @@ $acf_field_id = 'sidebar_menu';
 $field = get_field($acf_field_id, $post_id);  // Object | HTML | ID
 
 // We don't know the type yet
-$field_type = NavFieldEnum::UNKNOWN;
+$field_type = NavFieldTypes::UNKNOWN;
 
 // Let's find out...
 if(is_object($field)) 
-	$field_type = NavFieldEnum::OBJECT; 
+	$field_type = NavFieldTypes::OBJECT; 
 else if (is_scalar($field)){	
 	if(!is_numeric($field))  
-		$field_type = NavFieldEnum::HTML;
+		$field_type = NavFieldTypes::HTML;
 	 else 
-		$field_type = NavFieldEnum::ID;
+		$field_type = NavFieldTypes::ID;
 }
 
 // OK, based on what we know we should...
 switch ($field_type)
 {	
-  case NavFieldEnum::OBJECT:
+  case NavFieldTypes::OBJECT:
 	
 	echo "OBJ: ";
 	print_r($field);
     break;
 	
-  case NavFieldEnum::HTML:
+  case NavFieldTypes::HTML:
 	
 	echo "HTML: " . $field;
     break;
 	
-  case NavFieldEnum::ID:
+  case NavFieldTypes::ID:
 	
 	echo "ID: " . $field;
 	$items = wp_get_nav_menu_items($field);
