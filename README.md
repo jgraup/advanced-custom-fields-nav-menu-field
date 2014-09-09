@@ -43,11 +43,7 @@ if(!empty($field)){
   $items = wp_get_nav_menu_items($field);
   
   if($items){
-  
-    foreach($items as $key => $value){
-    
-      $titles[] = $value->title;
-    }
+    $titles = wp_list_pluck($items, 'title');
   }
 }
 
@@ -99,7 +95,13 @@ switch ($field_type)
 	
 	echo "OBJECT: {$field->name} | "; 
 	$items = wp_get_nav_menu_items($field->ID);
-	echo render_nav_menu_items($items);
+	$wrapItem = function ($ID, $title)
+	{
+		return "<a href='#{$ID}'>{$title}</a>";
+	};
+	echo implode (" / ", array_map($wrapItem, 
+		wp_list_pluck($items, 'ID'), 
+		wp_list_pluck($items, 'title')));
     break;
 	
   case NavFieldTypes::HTML:
