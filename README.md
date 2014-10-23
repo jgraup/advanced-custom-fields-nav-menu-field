@@ -18,6 +18,11 @@ Using ACF, you can set the Nav Menu Field to return the selected menu’s:
 
 This version adds support for [ACF Pro 5](http://www.advancedcustomfields.com/pro) to the exisiting [Nav Menu Field plugin](http://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/) by [Faison Zutavern](http://faisonz.com/wordpress-plugins/advanced-custom-fields-nav-menu-field/)  [@Faison](https://github.com/Faison) [@FaisonZ](https://twitter.com/FaisonZ/).
 
+## UPDATED (10/15/2014)
+
+The original vesion has been updated to include support for ACF 5 Pro. Now you can update directly from WP at [Nav Menu Field plugin page](http://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/) or follow the discussion on the WP Support Forum: [Advanced Custom Fields: Nav Menu Field
+[resolved] ACF 5 compatibility](https://wordpress.org/support/topic/acf-5-compatibility). Since this repo was created to add new functionality, I would recommend using the original version since it will most likely have better support moving forward. If you don't really care or just want to see some examples then please continue to read on.
+
 ## Example
 
 1. Set up your ACF in the backend and select "Nav Menu ID" as the Return Value
