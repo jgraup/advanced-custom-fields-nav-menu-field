@@ -1,6 +1,6 @@
 # Advanced Custom Fields: Nav Menu Field #
 
-This is an [Add-On plugin](http://wordpress.org/extend/plugins/advanced-custom-fields/) for Advanced Custom Fields (ACF) [4](http://www.advancedcustomfields.com/) & [Pro 5](http://www.advancedcustomfields.com/pro) that adds a 'Nav Menu' Field type, allowing you to select from the [menus](http://codex.wordpress.org/Navigation_Menus) you create in the WordPress Admin backend to use on your website's frontend. 
+This is an [Add-On plugin](http://wordpress.org/extend/plugins/advanced-custom-fields/)  [*](http://support.advancedcustomfields.com/forums/forum/add-ons/user-submitted/) [*](https://github.com/reyhoun/awesome-acf) for Advanced Custom Fields (ACF) [4](http://www.advancedcustomfields.com/) & [Pro 5](http://www.advancedcustomfields.com/pro) that adds a 'Nav Menu' Field type, allowing you to select from the [menus](http://codex.wordpress.org/Navigation_Menus) you create in the WordPress Admin backend to use on your website's frontend. 
 
 ![](http://faisonz.com/wp-content/uploads/2014/01/acf-nav-menu-field-banner-770x250.png)
 
@@ -148,3 +148,4 @@ function render_nav_menu_items($items){
 * [Creating an ACF Plugin](http://wordpress.org/extend/plugins/advanced-custom-fields/)
 * [Get Field in ACF](http://www.advancedcustomfields.com/resources/get_field/)
 * [Nav Menus](http://codex.wordpress.org/Navigation_Menus)
+* [Awesome Advanced Custom Field : Links](https://github.com/reyhoun/awesome-acf)
