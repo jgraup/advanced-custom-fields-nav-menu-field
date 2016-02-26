@@ -5,7 +5,7 @@ Author: Faison Zutavern
 Author URI: http://faisonz.com
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPL2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,9 @@ First, check that you added the necessary ACF code to your templates. If you don
 
 == Changelog ==
 
+= 2.0.1 =
+* Changed Menu Container field to radio select.
+
 = 2.0.0 =
 * Added ACF v5 class.
 * Updated code to follow coding standards
@@ -99,6 +102,9 @@ First, check that you added the necessary ACF code to your templates. If you don
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 2.0.0 =
+Fixed issue with selecting the Menu's containing element.
 
 = 2.0.0 =
 You now have support for ACF v5, and when the code is read, it makes fewer people cry!

@@ -3,7 +3,7 @@
  * Plugin Name: Advanced Custom Fields: Nav Menu Field
  * Plugin URI: http://faisonz.com/wordpress-plugins/advanced-custom-fields-nav-menu-field/
  * Description: Add-On plugin for Advanced Custom Fields (ACF) that adds a 'Nav Menu' Field type.
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author: Faison Zutavern
  * Author URI: http://faisonz.com
  * License: GPL2 or later
