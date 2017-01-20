@@ -1,0 +1,23 @@
+{
+    "name": "jgraup/acf-nav-menu-field",
+    "description": "Add-On plugin for Advanced Custom Fields (ACF) that adds a 'Nav Menu' Field type.",
+    "keywords": ["wordpress", "plugin"],
+    "type": "wordpress-plugin",
+    "homepage": "https://github.com/jgraup/advanced-custom-fields-nav-menu-field",
+    "authors": [
+        {
+            "name": "Faison Zutavern",
+            "homepage": "https://github.com/jgraup/advanced-custom-fields-nav-menu-field",
+            "role": "author"
+        },
+        {
+            "name": "Jesse Graupmann",
+            "homepage": "https://github.com/jgraup/advanced-custom-fields-nav-menu-field",
+            "role": "port to ACF 5 PRO"
+        }
+     ],
+    "license": "GPL2 or later",
+    "require": {
+    "composer/installers": "v1.0.7"
+    }
+}
