@@ -5,7 +5,7 @@ Author: Faison Zutavern
 Author URI: http://faisonz.com
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 1.1.2.5
+Stable tag: 2.0.1
 License: GPL2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Add-On plugin for Advanced Custom Fields (ACF) that adds a 'Nav Menu' Field type
 
 == Description ==
 
-Add [Navigation Menus](http://codex.wordpress.org/Navigation_Menus) to [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) (ACF) with the Nav Menu Field plugin! This plugin adds the Nav Menu Field type to ACF (version 4 and up), allowing you to select from the menus you create in the WordPress Admin backend to use on your website's frontend.
+Add [Navigation Menus](http://codex.wordpress.org/Navigation_Menus) to [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) (ACF) with the Nav Menu Field plugin! This plugin adds the Nav Menu Field type to ACF (version 5 & 4), allowing you to select from the menus you create in the WordPress Admin backend to use on your website's frontend.
 
 Using ACF, you can set the Nav Menu Field to return the selected menu's:
 
@@ -29,28 +29,12 @@ Feel free to try this add-on on your dev site, ask questions on the support link
 
 This add-on will work with:
 
-* version 4 and up
+* version 5
+* version 4
 
 == Installation ==
 
-This add-on can be treated as both a WP plugin and a theme include.
-
-= Plugin =
-1. Copy the 'advanced-custom-fields-nav-menu-field' folder into your plugins folder
-2. Activate the plugin via the Plugins admin page
-
-= Include =
-1.	Copy the 'advanced-custom-fields-nav-menu-field' folder into your theme folder (can use sub folders). You can place the folder anywhere inside the 'wp-content' directory
-2.	Edit your functions.php file and add the code below (Make sure the path is correct to include the nav-menu-v4.php file)
-
-`
-add_action('acf/register_fields', 'my_register_fields');
-
-function my_register_fields()
-{
-	include_once('advanced-custom-fields-nav-menu-field/nav-menu-v4.php');
-}
-`
+Follow the following instructions: https://codex.wordpress.org/Managing_Plugins#Installing_Plugins
 
 == Frequently Asked Questions ==
 
@@ -75,11 +59,11 @@ Finally, create or edit a page, select a menu in the Side Menu field, and view t
 
 = Will you make this plugin compatible with Advanced Custom Fields v3? =
 
-I will do that soon, but you really should think about upgrading Advanced Custom Fields. ACF has seen a lot of great changes from v3 to the most current version.
+No.
 
 = Why does the Nav Menu returned by your plugin look like an unstyled list of links? =
 
-I decided to return the Nav Menus without any added style, because I don't know what your website looks like. Frankly, I find it annoying when I have to compete with a plugin's styles, especially when a lot of them use !important. Now I can use this plugin on many sites with only a little extra styling work ahead of me.
+So that you can style it yourself. I don't want to step on your toes :)
 
 = I added the Nav Menu Field to Pages, selected my menu when creating a new page, but the menu doesn't show. What gives? =
 
@@ -97,9 +81,13 @@ First, check that you added the necessary ACF code to your templates. If you don
 
 == Changelog ==
 
-= 1.1.2.5 =
-* Adding support for ACF Pro v5
-* Tested and works with WordPress 4.0
+= 2.0.1 =
+* Changed Menu Container field to radio select.
+
+= 2.0.0 =
+* Added ACF v5 class.
+* Updated code to follow coding standards
+* Updated the ACF v4 class to use the updated code found in the ACF v5 Class
 
 = 1.1.2 =
 * Fixed a silly mistake related to allowing Null for a Nav Menu Field. Basically, it was storing the string "null" when you don't select a menu, that's taken care of now.
@@ -114,6 +102,12 @@ First, check that you added the necessary ACF code to your templates. If you don
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 2.0.0 =
+Fixed issue with selecting the Menu's containing element.
+
+= 2.0.0 =
+You now have support for ACF v5, and when the code is read, it makes fewer people cry!
 
 = 1.1.1 =
 I forgot to add a default value for the Menu Container field. So to eliminate WP_DEBUG warnings, I added 'div' as the default value. Please upgrade to avoid the warnings.
